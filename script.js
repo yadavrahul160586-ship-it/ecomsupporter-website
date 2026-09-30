@@ -1,5 +1,8 @@
 const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav');if(toggle&&nav){toggle.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))}
 
+/* Force the actual Ecom Supporter logo image into every brand-mark placeholder. */
+document.querySelectorAll('.brand-mark').forEach(mark=>{const img=document.createElement('img');img.src='ecom-supporter-icon.png';img.alt='Ecom Supporter logo';img.width=58;img.height=58;img.className='brand-logo';mark.replaceWith(img);});
+
 const enquiryForm=document.getElementById('enquiryForm');
 if(enquiryForm){
   enquiryForm.addEventListener('submit',function(e){
